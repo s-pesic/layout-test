@@ -47,7 +47,7 @@ header {
 .top-description {
     max-width:1240px;
     margin:0 auto;
-    background-color:red;
+    /* background-color:red; */
 }
 
 .top-description h3{
@@ -56,37 +56,99 @@ header {
     font-family: var(--secondary-font);
     font-weight:lighter;
     font-size: 1.65em;
-    background-color:blue;
+    /* background-color:blue; */
 }
 
-  /* -------------- MASONRY --------------- */
-  .masonry-brick {
-    flex: auto;
+/* -------------- MASONRY --------------- */
+.masonry-wrapper {
+    /* flex: auto;
     height: 2250px;
     min-width: 150px;
-    margin: 0 8px 8px 0; /* Some gutter */
-  }
+    margin: 0 8px 8px 0;  */
+    padding: 1.5em;
+    max-width: 1240px;
+    margin: 0 auto; 
+}
   
-  .masonry-brick:nth-child(3n+1) {
+/* .masonry-brick:nth-child(3n+1) {
     width: 320px;
-  }
-  .masonry-brick:nth-child(3n+1):nth-child(3n+2) {
+}
+.masonry-brick:nth-child(3n+1):nth-child(3n+2) {
     width: 377px;
     height:2000px;
-  }
-  .masonry-brick:nth-child(3n+1):nth-child(3n+3) {
+}
+.masonry-brick:nth-child(3n+1):nth-child(3n+3) {
     width: 180px;
-  }
-  /* .masonry-brick:nth-child(3n+1):nth-child(4n+4) {
+} */
+/* .masonry-brick:nth-child(3n+1):nth-child(4n+4) {
     width: 380px;
-  } */
+} */
 
+.masonry-container {
+    columns: 1;
+    column-gap: 10px;
+}
+.masonry-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
 
+/* ------------------ MEDIUM SCREEN ----------------- */
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {  
+    .masonry {
+        columns: 2;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+        grid-auto-rows: 0;
+    }
+    .masonry-item:nth-child(1) {
+        grid-row-end: span 79;
+    }
+    .masonry-item:nth-child(2) {
+        grid-row-end: span 87;
+    }
+    .masonry-item:nth-child(2) .masonry-content {
+        flex-direction: column-reverse;
+    }
+    .masonry-item:nth-child(3) {
+        grid-row-end: span 73;
+    }
+    .masonry-item:nth-child(4) {
+        grid-row-end: span 50;
+    }
+}
+.masonry-item, .masonry-content {
+    display: flex;
+    flex-direction: column;
+}
+  
+/* ---------------------- LARGE SCREEN --------------------- */
+@media only screen and (min-width: 1024px) {
+    .masonry {
+        columns: 1;
+    }
+    .masonry-item, .masonry-content {
+        flex-direction: row;
+    }
+    .masonry-item:nth-child(4) {
+        padding-right: 450px;
+        position: relative;
+        z-index: -1;
+    }
+    img.spills-over {
+        height: 203%;
+    }
+}
+
+/* ------------------------------------------------------ */
 
 .all-sections-wrapper {
     display:flex;
     flex-flow: column wrap;
-    max-height:2250px;
+    /* max-height:2250px; */
 
     /* justify-content:flex-start;
     align-content:flex-start;
@@ -96,7 +158,7 @@ header {
     max-width: 1240px;
     width: 100%;
     margin: 70px auto 50px auto;
-    background-color: seagreen;
+    /* background-color: seagreen; */
 }
 
 .section-wrapper {
@@ -114,7 +176,7 @@ header {
 
 .section-text {
     text-align: center;
-    background-color: violet;
+    /* background-color: violet; */
     /* min-width: 440px; */
     display:flex;
     flex-direction: column;
@@ -122,21 +184,12 @@ header {
     align-content: space-between;
 }
 
-.section-text__text {
-    /* width:100%;
-    height:100%; */
-}
-
 .section-text__text p {
     padding: 0 20px;
     margin: 50px 0;
     font-family: var(--secondary-font);
     font-size: 1.7em;
-    background-color: yellow;
-}
-
-.container-one {
-    background-color: salmon;
+    /* background-color: yellow; */
 }
 
 /* --------- SECTION ONE ----------------- */
@@ -148,7 +201,7 @@ header {
     margin: 0 30px 35px 0;
 }
 .section-wrapper.section-one {
-    background-color: red;
+    /* background-color: red; */
     max-width: 760px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -164,7 +217,7 @@ header {
     /* padding: 10px 20px 0 20px; */
     text-transform: uppercase;
     font-size: 1.5em;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .section-text.section-one {
@@ -181,8 +234,8 @@ header {
     font-size:250px;
     min-width:320px;
     width:375px;
-    min-height: 600px;
-    margin: 35px 30px 30px 0;
+    height: 600px;
+    margin: 0px 30px;
 }
 
 .section-wrapper.section-two {
@@ -209,13 +262,13 @@ header {
 
 .section-text.section-three {
     max-width:480px;
-    margin: 30px 0;
+    margin: 15px 0;
     height: 600px;
 }
 .section-text__heading.section-three {
     text-transform: uppercase;
     font-size: 1.5em;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .section-picture.section-three {
@@ -223,6 +276,7 @@ header {
     width:480px;
     height:490px;
     margin-bottom: 4px;
+    margin-left:30px;
 }
 
 
@@ -231,19 +285,20 @@ header {
 .blue-numeration.section-four {
     font-size:250px;
     width:320px;
-    min-height: 600px;
-    margin-top:30px;
+    height: 600px;
+    margin-top:0px;
 }
 
 .section-text__heading.section-four {
     text-transform: uppercase;
     font-size: 1.5em;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .section-text.section-four {
     max-width: 320px;
-    margin-top:30px;
+    position: relative;
+    top: -420px;
 }
 
 
@@ -252,20 +307,24 @@ header {
     font-size:250px;
     min-width:375px;
     min-height: 380px;
+    margin-left:30px;
+    margin-top: 10px;
     width:375px;
+    position: relative;
+    top: -420px;
 }
 
 .section-text__heading.section-five {
     text-transform: uppercase;
     font-size: 1.5em;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .section-text.section-five {
     max-width: 375px;
     width: 375px;
     height: 600px;
-    margin: 0 30px 30px 0;
+    margin: 0 30px 30px 30px;
 
 }
 
@@ -275,12 +334,13 @@ header {
     height:1020px;
 }
 
-
 /* ---------------------------------------------- */
 
 footer {
     max-width: 1340px;
     min-width: 812px;
+    position:relative;
+    top: -420px;  /* Znam da nije dobra da se ovako direktno menja pozicija, ovo je samo quick fix :) */
 }
 
 .footer-main-container {
@@ -292,23 +352,20 @@ footer {
 .footer-text-wrapper {
     max-width: 570px;
     padding-left: 75px;
-    background-color: yellowgreen;
-    /* display:flex;
-    flex-direction: column;
-    align-content: space-around; */
+    /* background-color: yellowgreen; */
 }
 .footer-text-wrapper__heading {
     font-family: var(--primary-font);
     font-size: 4.5em;
     text-transform: uppercase;
     max-width: 350px;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .footer-text-wrapper__text {
     font-family: var(--secondary-font);
     font-size:1.7em;
-    background-color: violet;
+    /* background-color: violet; */
     font-weight: lighter;
     font-stretch: semi-expanded;
     line-height: 1.5em;
