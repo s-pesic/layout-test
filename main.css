@@ -5,7 +5,7 @@
 :root {
     --primary-font: 'PT Serif', serif;
     --secondary-font: 'PT Sans', sans-serif;
-    --number-background-color: #86DDF3;
+    --primary-color: #86DDF3;
 }
 
 body {
@@ -83,7 +83,7 @@ header {
 }
 
 .section-number {
-    background-color: var(--number-background-color);
+    background-color: var(--primary-color);
     color:white;
     font-family: var(--primary-font);
     display:flex;
@@ -130,3 +130,62 @@ header {
 }
 
 
+footer {
+    max-width: 1340px;
+    min-width: 812px;
+}
+
+.footer-main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-text-wrapper {
+    max-width: 570px;
+    padding-left: 75px;
+    background-color: yellowgreen;
+    /* display:flex;
+    flex-direction: column;
+    align-content: space-around; */
+}
+.footer-text-wrapper__heading {
+    font-family: var(--primary-font);
+    font-size: 4.5em;
+    text-transform: uppercase;
+    max-width: 350px;
+    background-color: yellow;
+}
+
+.footer-text-wrapper__text {
+    font-family: var(--secondary-font);
+    font-size:1.7em;
+    background-color: violet;
+    font-weight: lighter;
+    font-stretch: semi-expanded;
+    line-height: 1.5em;
+}
+
+footer > p {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-weight: bolder;
+    color:var(--primary-color);
+    font-size: 8em;
+    z-index: 10;
+    position:relative;
+    top: -300px;
+}
+
+footer p span {
+    color: white;
+}
+
+.footer-image {
+    background-image:url(./images/footer.png);
+    width:670px;
+    height:980px;
+    min-width:440px;
+    max-width:670px;
+    margin-left: 18px;
+}
