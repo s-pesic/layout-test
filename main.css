@@ -11,6 +11,7 @@
 body {
     max-width: 1340px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -59,6 +60,9 @@ header {
 }
 
 
+
+
+
 .all-sections-wrapper {
     display:flex;
     justify-content: center;
@@ -74,24 +78,15 @@ header {
 
 .section-wrapper {
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
-.section-wrapper.section-one {
-    background-color: wheat;
-}
-
-.section-number {
+.blue-numeration {
     background-color: var(--primary-color);
     color:white;
     font-family: var(--primary-font);
     display:flex;
     justify-content: center;
     align-items:center;
-    font-size:250px;
-    min-width:320px;
-    min-height: 490;
 }
 
 .section-text {
@@ -102,13 +97,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-}
-
-.section-text__heading {
-    /* padding: 10px 20px 0 20px; */
-    text-transform: uppercase;
-    font-size: 1.5em;
-    background-color: yellowgreen;
 }
 
 .section-text__text {
@@ -124,10 +112,79 @@ header {
     background-color: yellow;
 }
 
-.section-picture {
-    min-width:477px;
+
+/* --------- SECTION ONE ----------------- */
+
+.blue-numeration.section-one {
+    font-size:250px;
+    min-width:320px;
+    min-height: 490px;
+}
+.section-wrapper.section-one {
+    background-color: wheat;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-picture.section-one{
+    max-width:477px;
     min-width:440px;
 }
+
+.section-text__heading.section-one {
+    /* padding: 10px 20px 0 20px; */
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: yellowgreen;
+}
+
+
+/* --------- SECTION TWO ----------------- */
+.blue-numeration.section-two {
+    font-size:250px;
+    min-width:320px;
+    min-height: 490px;
+}
+
+.section-wrapper.section-two {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+.section-picture.section-two {
+    background-image: url(./images/step-2.png);
+    width:320px;
+    height: 600px;
+}
+
+
+
+/* --------- SECTION THREE ----------------- */
+
+.section-wrapper.section-three {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.section-text.section-three {
+    max-width:480px;
+}
+.section-text__heading.section-three {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: yellowgreen;
+}
+
+.section-picture.section-three {
+    background-image: url(./images/step-1.png);
+    width:480px;
+    height: 490px;
+}
+
+
+
 
 
 footer {
@@ -166,7 +223,11 @@ footer {
     line-height: 1.5em;
 }
 
-footer > p {
+.zemeckis.mobile {
+
+}
+
+.zemeckis {
     text-align: center;
     font-family: var(--secondary-font);
     font-weight: bolder;
@@ -177,7 +238,7 @@ footer > p {
     top: -300px;
 }
 
-footer p span {
+.zemeckis span {
     color: white;
 }
 
