@@ -161,145 +161,27 @@ header {
     /* background-color: seagreen; */
 }
 
-.section-wrapper {
-    display:flex;
-}
 
-.blue-numeration {
-    background-color: var(--primary-color);
-    color:white;
-    font-family: var(--primary-font);
-    display:flex;
-    justify-content: center;
-    align-items:center;
-}
 
-.section-text {
-    text-align: center;
-    /* background-color: violet; */
-    /* min-width: 440px; */
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-}
 
-.section-text__text p {
-    padding: 0 20px;
-    margin: 50px 0;
-    font-family: var(--secondary-font);
-    font-size: 1.7em;
-    /* background-color: yellow; */
-}
 
 /* --------- SECTION ONE ----------------- */
 
-.blue-numeration.section-one {
-    font-size:250px;
-    width:320px;
-    height: 490px;
-    margin: 0 30px 35px 0;
-}
-.section-wrapper.section-one {
-    /* background-color: red; */
-    max-width: 760px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
-}
 
-.section-picture.section-one{
-    max-width:477px;
-    min-width:440px;
-}
-
-.section-text__heading.section-one {
-    /* padding: 10px 20px 0 20px; */
-    text-transform: uppercase;
-    font-size: 1.5em;
-    /* background-color: yellowgreen; */
-}
-
-.section-text.section-one {
-    max-width:375px;
-    width:375px;
-    height:490px;
-    margin-right: 0px;
-}
 
 
 /* --------- SECTION TWO ----------------- */
 
-.blue-numeration.section-two {
-    font-size:250px;
-    min-width:320px;
-    width:375px;
-    height: 600px;
-    margin: 0px 30px;
-}
-
-.section-wrapper.section-two {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-}
-
-.section-picture.section-two {
-    background-image: url(./images/step-2.png);
-    width:320px;
-    height: 600px;
-}
 
 
 
 /* --------- SECTION THREE ----------------- */
 
 
-.section-wrapper.section-three {
-    display:flex;
-    flex-direction: column;
-}
-
-.section-text.section-three {
-    max-width:480px;
-    margin: 15px 0;
-    height: 600px;
-}
-.section-text__heading.section-three {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    /* background-color: yellowgreen; */
-}
-
-.section-picture.section-three {
-    background-image: url(./images/step-1.png);
-    width:480px;
-    height:490px;
-    margin-bottom: 4px;
-    margin-left:30px;
-}
 
 
 /* --------- SECTION FOUR ----------------- */
 
-.blue-numeration.section-four {
-    font-size:250px;
-    width:320px;
-    height: 600px;
-    margin-top:0px;
-}
-
-.section-text__heading.section-four {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    /* background-color: yellowgreen; */
-}
-
-.section-text.section-four {
-    max-width: 320px;
-    position: relative;
-    top: -420px;
-}
 
 
 /* --------- SECTION FIVE ----------------- */
@@ -314,12 +196,6 @@ header {
     top: -420px;
 }
 
-.section-text__heading.section-five {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    /* background-color: yellowgreen; */
-}
-
 .section-text.section-five {
     max-width: 375px;
     width: 375px;
@@ -328,11 +204,6 @@ header {
 
 }
 
-.final-section-image {
-    background-image: url(./images/step-3-4.png);
-    width: 480px;
-    height:1020px;
-}
 
 /* ---------------------------------------------- */
 
@@ -340,7 +211,7 @@ footer {
     max-width: 1340px;
     min-width: 812px;
     position:relative;
-    top: -420px;  /* Znam da nije dobra da se ovako direktno menja pozicija, ovo je samo quick fix :) */
+    /* top: -420px;  Znam da nije dobra praksa da se ovako direktno menja pozicija, ovo je samo quick fix :) */
 }
 
 .footer-main-container {
@@ -397,4 +268,204 @@ footer {
     min-width:440px;
     max-width:670px;
     margin-left: 18px;
+}
+
+
+/* ========== MAIN SECTION ========== */
+
+.main-section-container {
+    margin: 30px auto;
+    max-width: 1240px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: limegreen;
+}
+
+.section-wrapper {
+    display:flex;
+}
+
+.section-text {
+    text-align: center;
+    background-color: violet;
+    /* min-width: 440px; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.section-text__heading {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: yellowgreen;
+}
+
+.section-text__text p {
+    padding: 0 20px;
+    margin: 50px 0;
+    font-family: var(--secondary-font);
+    font-size: 1.7em;
+    background-color: yellow;
+}
+
+.blue-numeration {
+    background-color: var(--primary-color);
+    font-size:250px;
+    color:white;
+    font-family: var(--primary-font);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+
+
+.section-wrapper.section-one {
+    background-color: rgb(224, 167, 8);
+    max-width: 760px;
+    max-height: 490px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.blue-numeration.section-one--segment-one {
+    width:320px;
+    max-width:320px;
+    height: 490px;
+    max-height: 490px;
+    margin-right:35px; 
+    margin-bottom: 35px; 
+}
+
+.section-text.section-one--segment-one {
+    width:375px;
+    max-width:375px;
+    height:490px;
+    max-height: 490px;
+    margin-right:30px;
+    margin-bottom: 35px;
+    display:flex;
+}
+
+
+
+.blue-numeration.section-one--segment-two {
+    font-size:250px;
+    /* min-width:320px;     moze da se ukloni? */
+    width:375px;
+    min-width: 375px;;
+    height: 600px;
+    max-height:600px;
+    margin: 0 30px 35px 0;
+}
+
+.section-wrapper.section-one--segment-two {
+    flex-direction: row;
+    max-width: 760px;
+    flex-wrap: wrap-reverse;
+    background-color: maroon;
+}
+
+.section-picture.section-one--segment-two {
+    background-image: url(./images/step-2.png);
+    width:320px;
+    min-width:320px;
+    height: 600px;
+    max-height: 600px;
+    margin: 0 35px 35px 0;
+}
+
+
+
+
+.section-wrapper.section-two {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin-bottom: 35px;
+    background-color: midnightblue;
+}
+
+.section-picture.section-two {
+    background-image: url(./images/step-1.png);
+    width:480px;
+    max-width: 480px;
+    min-width: 320px;
+    height:490px;
+    max-height:490px;
+    margin-bottom: 35px;
+}
+
+.section-text.section-two {
+    width:480px;
+    max-width:480px;
+    min-width: 320px;
+    max-height:600px;
+    height: 600px;
+    margin-bottom:30px;
+}
+
+
+
+
+
+.section-wrapper.section-three {
+    flex-direction: column;
+    max-width: 320px;
+    margin-right:35px;
+    flex-wrap: wrap;
+    background-color: maroon;
+}
+
+.blue-numeration.section-three {
+    width:320px;
+    min-width: 320px;
+    height: 600px;
+    max-height: 600px;
+    margin: 0 35px 40px 0;
+}
+
+.section-text.section-three {
+    max-width: 320px;
+    max-height: 380px;
+    margin-right:35px;
+}
+
+
+
+
+
+.section-wrapper.section-four {
+    flex-direction: column;
+    max-width: 375px;
+    margin-right:30px;
+    flex-wrap: wrap;
+    background-color:olive;
+}
+
+.section-text.section-four {
+    max-width: 375px;
+    max-height: 600px;
+    height:600px;
+    margin-bottom: 40px;
+}
+
+.blue-numeration.section-four {
+    width:375px;
+    min-width: 375px;
+    height: 380px;
+    max-height: 380px;
+}
+
+.section-picture.section-five {  /* split in two in @media query? */
+    background-image: url(./images/step-3-4.png);
+    width: 480px;
+    height:1020px;
 }
